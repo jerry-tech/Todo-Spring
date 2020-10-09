@@ -1,7 +1,8 @@
-package com.todo.Todo.repositories;
+package com.angular.todo.repositories;
 
 
-import com.todo.Todo.models.Todo;
+
+import com.angular.todo.models.Todo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

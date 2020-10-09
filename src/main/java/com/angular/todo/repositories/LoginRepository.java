@@ -1,6 +1,7 @@
-package com.todo.Todo.repositories;
+package com.angular.todo.repositories;
 
-import com.todo.Todo.models.Register;
+
+import com.angular.todo.models.Register;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

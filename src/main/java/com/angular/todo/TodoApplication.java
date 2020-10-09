@@ -1,4 +1,4 @@
-package com.todo.Todo;
+package com.angular.todo;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
