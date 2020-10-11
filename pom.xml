@@ -166,6 +166,11 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>4.0.3</version>
+				<configuration>
+					<url>jdbc:sqlite:src\\main\\resources\\db\\migration\\Todo.db</url>
+					<user>sa</user>
+					<baselineOnMigrate>true</baselineOnMigrate>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
