@@ -4,9 +4,6 @@ import com.angular.todo.models.Todo;
 import com.angular.todo.repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -15,9 +12,6 @@ public class Data {
 
     @Autowired
     private TodoRepository todoRepository;
-
-    @Autowired
-    private EntityManager managedEntity;
 
     public List<Todo> getTodo(Long userId){
         List<Todo> getTodo = todoRepository.getAllTodoByUser_ID(userId);

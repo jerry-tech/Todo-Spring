@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<io.spring-fox.version>3.0.0</io.spring-fox.version>
+		<io.spring-fox.version>2.9.2</io.spring-fox.version>
 	</properties>
 
 	<dependencies>
@@ -34,14 +34,15 @@
 
 		<dependency>
 			<groupId>io.springfox</groupId>
-			<artifactId>springfox-boot-starter</artifactId>
-			<version>3.0.0</version>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${io.spring-fox.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>3.0.0</version>
+			<version>${io.spring-fox.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -60,6 +61,7 @@
 <!--					<artifactId> spring-boot-starter-tomcat</artifactId>-->
 <!--				</exclusion>-->
 <!--			</exclusions>-->
+
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.session</groupId>
@@ -88,6 +90,11 @@
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>5.3.2</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.11.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.restdocs</groupId>

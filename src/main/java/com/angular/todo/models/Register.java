@@ -23,6 +23,13 @@ public class Register {
     public Register(){
     }
 
+    public Register(Long user_id, String username, String password, String email_add) {
+        this.user_id = user_id;
+        this.username = username;
+        this.password = password;
+        this.email_add = email_add;
+    }
+
     public Register(String username, String password, String email_add) {
         this.username = username;
         this.password = password;
