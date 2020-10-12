@@ -128,9 +128,23 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>5.2.4</version>
+		</dependency>
 	</dependencies>
 
 	<build>
+<!--		<resources>-->
+<!--			<resource>-->
+<!--				<directory>src/main/resources</directory>-->
+<!--				<includes>-->
+<!--					<include>*.*</include>-->
+<!--					<include>db/migration/*</include>-->
+<!--				</includes>-->
+<!--			</resource>-->
+<!--		</resources>-->
 		<plugins>
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
@@ -162,15 +176,17 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<version>4.0.3</version>
+					<groupId>org.flywaydb</groupId>
+					<artifactId>flyway-maven-plugin</artifactId>
+					<version>4.0.3</version>
 				<configuration>
-					<url>jdbc:sqlite:src\\main\\resources\\db\\migration\\Todo.db</url>
+					<url>jdbc:sqlite:src\\main\\java\\com\\angular\\todo\\services\\Todo.db</url>
 					<baselineOnMigrate>true</baselineOnMigrate>
+					<table>schema_version</table>
 				</configuration>
 
 			</plugin>
+
 		</plugins>
 	</build>
 
