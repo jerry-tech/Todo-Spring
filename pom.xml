@@ -120,13 +120,13 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.xerial</groupId>
-			<artifactId>sqlite-jdbc</artifactId>
-			<version>3.25.2</version>
-		</dependency>
-		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
@@ -169,17 +169,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-					<groupId>org.flywaydb</groupId>
-					<artifactId>flyway-maven-plugin</artifactId>
-					<version>4.0.3</version>
-				<configuration>
-					<url>jdbc:sqlite:src\\main\\java\\com\\angular\\todo\\services\\Todo.db</url>
-					<baselineOnMigrate>true</baselineOnMigrate>
-					<table>schema_version</table>
-				</configuration>
-
 			</plugin>
 
 		</plugins>
